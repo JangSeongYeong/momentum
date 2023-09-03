@@ -1,0 +1,47 @@
+body {
+    color: white;
+
+}
+
+.hidden {
+    display: none;
+}
+
+#clock {
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+#quote {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* 내용을 가운데 정렬 */
+    padding: 10px; /* 원하는 패딩 값을 설정하세요 */
+}
+
+#weather {
+    position: fixed;
+    top: 25px;
+    left: 10px;
+}
+
+#login {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 90vh; /* 화면 높이 만큼 요소를 채움 */
+    font-size: 30px;
+}
+
+#toDoList {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+}
+
+#toDoInput {
+    width: 200px;
+}
