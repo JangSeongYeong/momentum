@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+</head>
+<body>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" placeholder="Enter your search query">
+        <input type="submit" value="Search">
+    </form>
+
+    <ul id="searchResults">
+        <!-- Search results will be displayed here -->
+    </ul>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const query = document.getElementById("searchQuery").value;
+
+            // Open Bing search results in Microsoft Edge
+            const edgeUrl = "microsoft-edge:" + "https://www.bing.com/search?q=" + encodeURIComponent(query);
+            window.open(edgeUrl, "_blank");
+
+            // Display the search query as a list item in the searchResults list
+            const searchResultsList = document.getElementById("searchResults");
+            const listItem = document.createElement("li");
+            listItem.textContent = "You searched for: " + query;
+            searchResultsList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

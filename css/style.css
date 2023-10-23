@@ -43,13 +43,23 @@ body {
 }
 
 input[type="text"] {
-    background-color: #f2f2f2;
-    border: none;
+    background-color: transparent;
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:1;
+    border-color: white;
     padding: 10px;
     font-size: 16px;
     font-family: Arial, sans-serif;
     width: 230px;
+    color: white;
 }
+input[type="text"]::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
 input[type="submit"] {
     background-color: #007bff;
     color: #fff;

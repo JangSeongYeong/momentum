@@ -14,15 +14,20 @@
         </form>
         <h1 id="greeting" class="hidden"></h1>
         <form id="search-google" class="hidden">
-            <input id="searchInput" type="text" placeholder="Google에서 검색하세요">
+            <input id="searchInputG" type="text" placeholder="Google에서 검색하세요">
             <input type="submit" value="검색" />
+        </form>
+        <br>
+        <form id="search-bing" class="hidden">
+            <input id="searchInputB" type="text"  placeholder="Bing에서 검색하세요">
+            <input type="submit" value="검색">
         </form>
     </div>
     <div id="toDoList">
+        <ul id="todo-list"></ul>
         <form id="todo-form">
             <input id="toDoInput" type="text" placeholder="Write a To Do and Press Enter" required/>
         </form>
-        <ul id="todo-list"></ul>
     </div>
     <h2 id="clock">00:00:00</h2>
     <div id="quote">

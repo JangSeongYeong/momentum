@@ -1,12 +1,17 @@
-const searchForm = document.querySelector("#search-google");
+const searchFormG = document.querySelector("#search-google");
+const searchInputG = document.querySelector("#searchInputG");
+const searchFormB = document.querySelector("#search-bing");
+const searchInputB = document.querySelector("#searchInputB");
 
-
-function onSearchSubmit(event){
-    event.preventDefault();
-    const searchText = document.querySelector("#searchInput").value;
-    const googleSearchUrl = `https://www.google.com/search?q=${searchText}`;
-
-    window.open(googleSearchUrl, "_blank"); //_blank: 새 창에서 실행
+function performSearch(searchInput, searchHeadUrl) {
+    return function (event) {
+        event.preventDefault();
+        const searchText = searchInput.value;
+        const searchUrl = searchHeadUrl+encodeURIComponent(searchText);
+        searchInput.value = "";
+        window.open(searchUrl, "_blank");
+    };
 }
 
-searchForm.addEventListener("submit", onSearchSubmit);
+searchFormG.addEventListener("submit", performSearch(searchInputG, "https://www.google.com/search?q=")); // google 검색
+searchFormB.addEventListener("submit", performSearch(searchInputB, "microsoft-edge:https://www.bing.com/search?q=")); // bing검색
